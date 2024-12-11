@@ -130,16 +130,3 @@ app.delete('/api/data/:id', async (req, res) => {
         res.status(500).send({ error: "Error eliminando usuario" });
     }
 });
-
-
-
-
-
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
-
-// Inicio del servidor
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
