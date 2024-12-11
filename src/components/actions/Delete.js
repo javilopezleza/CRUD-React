@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import DeletePage from "../pages/DeletePage.js";
+import DeletePage from "../../pages/DeletePage.js";
 
 function Delete() {
     const { id } = useParams(); // Obtiene el id desde la URL

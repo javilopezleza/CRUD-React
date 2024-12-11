@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Swal from 'sweetalert2';
-import CreatePage from "../pages/CreatePage.js";
+import CreatePage from "../../pages/CreatePage.js";
 import { useNavigate } from "react-router-dom";
 
 

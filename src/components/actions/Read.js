@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ReadPage from "../pages/ReadPage.js";
+import ReadPage from "../../pages/ReadPage.js";
+
 
 function Read() {
     const [data, setData] = useState([]);

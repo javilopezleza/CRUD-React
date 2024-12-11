@@ -2,13 +2,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function ReadPage({ error, data }) {
+    // Renombramos "isActive" a "Activo" solo en la visualización
     const headers = [
-        "_id",
         "Nombre",
         "Email",
         "Edad",
         "Direccion",
-        "isActive",
+        "Activo",  // Usamos "Activo" aquí para la visualización
         "Actualizar",
         "Eliminar"
     ];
@@ -63,13 +63,12 @@ function ReadPage({ error, data }) {
                                                 return <td key={`${item._id}-${colIndex}`}>{toCapitalize(value)}</td>;
                                             }
 
-                                            if (header === 'isActive') {
-                                                return <td key={`${item._id}-${colIndex}`}>{value ? 'Sí' : 'No'}</td>;
+                                            if (header === 'Activo') { 
+                                                return <td key={`${item._id}-${colIndex}`}>{item.isActive ? 'Sí' : 'No'}</td>;
                                             }
 
                                             if (header === 'Actualizar') {
                                                 return (
-
                                                     <td key={`update-${item._id}`}>
                                                         <button
                                                             className="btn btn-warning me-2"
@@ -78,12 +77,11 @@ function ReadPage({ error, data }) {
                                                             Actualizar
                                                         </button>
                                                     </td>
-
                                                 );
                                             }
+
                                             if (header === 'Eliminar') {
                                                 return (
-
                                                     <td key={`delete-${item._id}`}>
                                                         <button
                                                             className="btn btn-danger"
@@ -95,15 +93,12 @@ function ReadPage({ error, data }) {
                                                 );
                                             }
 
-
                                             return <td key={`${item._id}-${colIndex}`}>{value}</td>;
                                         })}
                                     </tr>
                                 ))}
                             </tbody>
-
                         </table>
-
                     ) : (
                         <p>No data available</p>
                     )}

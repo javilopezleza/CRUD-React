@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import UpdatePage from "../pages/UpdatePage.js";
+import UpdatePage from "../../pages/UpdatePage.js";
 
 function Update() {
-    const { id } = useParams(); // Obtiene el ID del usuario de la URL
-    const navigate = useNavigate(); // Para redirigir tras actualizar
+    const { id } = useParams(); 
+    const navigate = useNavigate(); 
     const [formData, setFormData] = useState({
         Nombre: "",
         Email: "",
