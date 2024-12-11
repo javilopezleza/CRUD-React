@@ -7,7 +7,7 @@ function UpdatePage({handleChange, formData, handleSubmit, setFormData}) {
         <h2 className="Update-header text-center">Actualizar Usuario: {formData.Nombre}</h2>
 
         <form className="row w-100 justify-content-center" onSubmit={handleSubmit}>
-            {/* Sección 1: Datos básicos */}
+            {/* Section 1: Basic Date */}
             <div className="section1 col-lg-8 mb-4">
                 <div className="row">
                     <div className="col-md-4">
@@ -57,7 +57,7 @@ function UpdatePage({handleChange, formData, handleSubmit, setFormData}) {
                 </div>
             </div>
 
-            {/* Sección 2: Dirección */}
+            {/* Section 2: Direction */}
             <div className="section2 col-lg-8 mb-4">
                 <div className="row">
                     <div className="col-md-3">
@@ -120,22 +120,9 @@ function UpdatePage({handleChange, formData, handleSubmit, setFormData}) {
                 </div>
             </div>
 
-            {/* Sección 3: Roles y estado */}
+            {/* Section 3: Roles & State */}
             <div className="section3 col-lg-8 mb-4">
                 <div className="row">
-                    {/* <div className="col-md-6">
-                        <label className="form-label">
-                            Roles:
-                            <input
-                                type="text"
-                                name="roles"
-                                value={formData.roles.join(", ")}
-                                onChange={handleRolesChange}
-                                className="form-control"
-                                placeholder="Roles"
-                            />
-                        </label>
-                    </div> */}
                     <div className="col-md-6">
                         <label className="form-label d-flex align-items-center mt-4">
                             Activo:
@@ -153,7 +140,7 @@ function UpdatePage({handleChange, formData, handleSubmit, setFormData}) {
                 </div>
             </div>
 
-            {/* Botón de enviar */}
+            {/* Submit Button */}
             <div className="col-lg-8 text-center">
                 <button className="btn btn-outline-primary btn-lg w-100" type="submit">
                     Actualizar Usuario

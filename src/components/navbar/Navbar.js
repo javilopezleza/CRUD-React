@@ -30,6 +30,8 @@ function Navbar() {
                 </div>
             </nav>
 
+            {/* Routes */}
+
             <Routes>
                 <Route path="/" element={<Home />} />  
                 <Route path="/index" element={<Home />} />            

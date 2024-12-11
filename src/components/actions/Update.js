@@ -6,6 +6,7 @@ import UpdatePage from "../../pages/UpdatePage.js";
 function Update() {
     const { id } = useParams(); 
     const navigate = useNavigate(); 
+    //Initial data for Form
     const [formData, setFormData] = useState({
         Nombre: "",
         Email: "",
@@ -18,7 +19,7 @@ function Update() {
         roles: ["user"],
         updatedAt: ""
     });
-    const [loading, setLoading] = useState(true); // Para mostrar carga mientras se obtienen datos
+    const [loading, setLoading] = useState(true); // Show loading meanwhile data is retreving
 
     useEffect(() => {
         async function fetchUser() {
@@ -96,7 +97,7 @@ function Update() {
                     text: "El usuario ha sido actualizado correctamente.",
                     icon: "success",
                 });
-                navigate("/read"); // Redirige al listado de usuarios
+                navigate("/read"); // Redirect to player list
             } else {
                 console.error("Error updating user:", response.status);
                 Swal.fire({
