@@ -1,0 +1,16 @@
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "age": 30,
+    "isActive": true,
+    "address": {
+      "street": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10001"
+    },
+    "roles": ["admin", "user"],
+    "createdAt": "2024-12-10T12:00:00Z",
+    "updatedAt": "2024-12-10T12:00:00Z"
+  }
+  
